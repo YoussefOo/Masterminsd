@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="de">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Codecracker - Admin Dashboard
+  </title>
+ </head>
+ <body>
+  <div class="container">
+   <button class="btn logout-btn" data-action="logout">
+    Abmelden
+   </button>
+   <div class="admin-badge" id="admin-info">
+    Admin
+   </div>
+   <h2>
+    Benutzerverwaltung
+   </h2>
+   <p class="subtitle">
+    Diese Ansicht und die zugehörigen Endpunkte sind ausschließlich für Administratoren verfügbar.
+   </p>
+   <div class="top-bar">
+    <div class="search-box">
+     <input autocomplete="off" id="search-input" placeholder="Benutzername suchen (z. B. HOU oder Sif)" type="text"/>
+     <button class="btn btn-search" data-action="filter-users" type="button">
+      Suchen
+     </button>
+    </div>
+    <a class="btn btn-add" href="/pages/register.html">
+     Benutzer hinzufügen
+    </a>
+   </div>
+   <div class="search-status" id="search-status">
+   </div>
+   <!-- جدول إدارة المستخدمين مع عمود الحالة (Status) والنقاط -->
+   <table>
+    <thead>
+     <tr>
+      <th>
+       Benutzername
+      </th>
+      <th>
+       Rolle
+      </th>
+      <th>
+       Status
+      </th>
+      <th>
+       Punkte
+      </th>
+      <th class="text-right">
+       Aktionen
+      </th>
+     </tr>
+    </thead>
+    <tbody id="user-table-body">
+     <tr>
+      <td class="text-center" colspan="5">
+       Lade Benutzer...
+      </td>
+     </tr>
+    </tbody>
+   </table>
+   <div class="section-game" id="game-status-panel">
+    <h3>
+     🎮 Spielstand
+    </h3>
+    <p class="admin-description">
+     Hier siehst du den aktuellen serverseitigen Spielstand. Der Geheimcode wird ausschließlich vom Server erzeugt und nur dem Admin angezeigt, solange das Spiel läuft.
+    </p>
+    <div id="admin-game-status">
+     <div class="admin-empty-state">
+      Kein aktives Spiel.
+     </div>
+    </div>
+   </div>
+  </div>
+  <script src="../src/admin.ts" type="module">
+  </script>
+ </body>
+</html>

@@ -1,0 +1,86 @@
+body { background-color: #f1f3f5; font-family: sans-serif; margin: 0; padding: 40px; color: #333; }
+    .main-grid { max-width: 1050px; margin: 0 auto; display: flex; gap: 30px; }
+    .card { background: white; padding: 30px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); flex: 1; }
+    h2 { margin-top: 0; margin-bottom: 5px; }
+    p.subtitle { color: #666; font-size: 0.85rem; margin-bottom: 25px; }
+    .user-row { display: flex; justify-content: space-between; align-items: center; background: #f8f9fa; padding: 12px 15px; border-radius: 6px; margin-bottom: 10px; border: 1px solid #dee2e6; }
+    .badge { padding: 4px 12px; border-radius: 12px; font-size: 0.8rem; font-weight: bold; }
+    .badge-bereit { background: #d1e7dd; color: #0f5132; }
+    .badge-ausstehend { background: #f8d7da; color: #842029; }
+    .btn { padding: 12px; border: none; border-radius: 6px; cursor: pointer; font-weight: bold; width: 100%; font-size: 1rem; margin-top: 15px; }
+    .btn-bereit { background: #198754; color: white; }
+    .btn-ablehnen { background: #6c757d; color: white; margin-top: 10px; }
+    .btn-start-lobby { background: #0d6efd; color: white; margin-top: 15px; display: none; }
+    table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+    th, td { padding: 12px; text-align: left; border-bottom: 1px solid #dee2e6; }
+    th { background: #f8f9fa; font-size: 0.9rem; color: #555; }
+    .logout-btn { background: #343a40; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer; float: right; font-weight: bold; }
+    .lobby-counter-box { background: #e9ecef; padding: 10px 15px; border-radius: 6px; margin-bottom: 15px; font-size: 0.9rem; font-weight: bold; color: #495057; }
+    
+    .active-game-banner {
+      background: #fdf0ed;
+      border: 1px solid #f5c2c7;
+      border-left: 5px solid #d9534f;
+      padding: 15px 20px;
+      border-radius: 6px;
+      margin-bottom: 20px;
+      color: #58151c;
+    }
+    .user-row .user-points {
+      font-size: 0.8rem;
+      color: #666;
+      margin-left: 10px;
+    }
+    .highlight-me {
+      background: #e3f2fd !important;
+      border-color: #0d6efd !important;
+    }
+    .invitation-box { margin-bottom:20px; border:1px solid #cfd8e3; border-radius:10px; overflow:hidden; background:#fff; }
+    .invitation-toggle { width:100%; border:0; background:#f1f5f9; padding:14px 16px; display:flex; justify-content:space-between; align-items:center; cursor:pointer; font-weight:700; font-size:1rem; color:#334155; }
+    .invitation-toggle:hover { background:#e8eef5; }
+    .invitation-panel { display:none; padding:16px; border-top:1px solid #dee2e6; }
+    .invitation-panel.open { display:block; }
+    .invite-player { display:flex; align-items:center; justify-content:space-between; gap:10px; padding:9px 11px; border:1px solid #e5e7eb; border-radius:7px; margin-bottom:7px; background:#fafafa; }
+    .invite-player input { width:18px; height:18px; }
+    .invite-card { border:1px solid #dbe3ec; border-left:4px solid #0d6efd; border-radius:8px; padding:12px; margin-top:10px; background:#f8fbff; }
+    .invite-card.incoming { border-left-color:#198754; background:#f5fff8; }
+    .invite-card.resolved { opacity:.85; }
+    .invite-actions { display:flex; gap:8px; margin-top:10px; }
+    .invite-actions button { flex:1; border:0; border-radius:6px; padding:9px; cursor:pointer; font-weight:700; }
+  
+.dashboard-topbar { max-width:1050px; margin:0 auto 20px auto; }
+.dashboard-title { margin:0; font-size:1.5rem; }
+.status-section { margin-top:30px; border-top:1px solid #dee2e6; padding-top:20px; }
+.ready-question { font-weight:bold; margin-bottom:10px; }
+.text-right { text-align:right; }
+.text-center { text-align:center; }
+.last-result-card { border:1px solid #badbcc; border-left:5px solid #198754; background:#d1e7dd; color:#0f5132; padding:15px 18px; border-radius:6px; margin-bottom:20px; }
+.last-result-title { font-size:1.05rem; font-weight:bold; margin-bottom:5px; }
+.last-result-detail { margin-bottom:4px; }
+.last-result-meta { display:block; margin-top:6px; color:#3d6b52; }
+.selection-heading { margin-top:16px; border-top:1px solid #e5e7eb; padding-top:14px; font-weight:700; }
+.selection-help { color:#64748b; font-size:.88rem; margin-top:5px; }
+.selection-empty { color:#64748b; font-size:.9rem; margin-top:8px; }
+.ready-label { color:#198754; font-weight:700; }
+.invite-send-btn { margin-top:10px; }
+.incoming-wrapper { margin-bottom:16px; }
+.incoming-title { font-weight:800; margin-bottom:8px; color:#155724; }
+.incoming-card { margin-top:0; margin-bottom:10px; }
+.invite-time { font-size:.88rem; color:#64748b; margin-top:4px; }
+.invite-accept { background:#198754; color:#fff; }
+.invite-reject { background:#6c757d; color:#fff; }
+.muted-small { color:#64748b; font-size:.9rem; }
+.outgoing-title { font-weight:700; margin-bottom:8px; }
+.outgoing-group { margin-top:7px; }
+.outgoing-line { font-size:.9rem; margin-top:4px; }
+.error-message { color:#b42318; }
+.error-message-spaced { margin-bottom:12px; }
+.active-game-banner.participant { border-left:5px solid #198754; background:#d1e7dd; color:#0f5132; }
+.active-game-banner.spectator { border-left:5px solid #6c757d; background:#f8f9fa; color:#343a40; }
+.active-game-title { margin:0 0 5px 0; font-size:1.05rem; }
+.active-game-players { margin:4px 0; font-weight:bold; }
+.active-game-info { margin:4px 0; font-size:.9rem; }
+.join-game-btn { margin-top:10px; padding:8px; font-size:.9rem; }
+.counter-ready { color:#198754; }
+.counter-pending { color:#dc3545; }
+.score-cell { font-weight:bold; }

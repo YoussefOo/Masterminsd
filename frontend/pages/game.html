@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="de">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Codecracker - Mastermind Spiel
+  </title>
+ </head>
+ <body>
+  <div id="game-modal">
+   <div class="modal-content">
+    <h2 id="modal-title">
+     Hinweis
+    </h2>
+    <p id="modal-text">
+     Nachricht...
+    </p>
+    <button class="modal-btn" data-action="close-modal" id="modal-ok-btn">
+     OK
+    </button>
+   </div>
+  </div>
+  <!-- Active abort confirmation modal -->
+  <div class="abort-modal" id="abort-modal">
+   <div class="modal-content abort-modal-content">
+    <div class="abort-warning-icon">
+     ⚠️
+    </div>
+    <h2>
+     Spiel wirklich abbrechen?
+    </h2>
+    <p>
+     Wenn du jetzt abbrichst, verlierst du
+     <strong>
+      -1 Punkt
+     </strong>
+     . Dein Gegner erhält
+     <strong>
+      +3 Punkte
+     </strong>
+     .
+    </p>
+    <div class="modal-actions">
+     <button class="modal-btn secondary" data-action="close-abort-modal" type="button">
+      Weiter spielen
+     </button>
+     <button class="modal-btn danger" data-action="confirm-abort" id="confirm-abort-btn" type="button">
+      Spiel abbrechen
+     </button>
+    </div>
+   </div>
+  </div>
+  <div class="game-container">
+   <div class="left-panel">
+    <div>
+     <h2 class="round-title" id="round-title">
+      Runde 1 von 10
+     </h2>
+     <span class="timer">
+      Verbleibende Zeit:
+      <span id="time">
+       30
+      </span>
+      s
+     </span>
+    </div>
+    <div class="turn-badge" id="player-turn">
+     Spieler am Zug: Lade...
+    </div>
+    <p class="game-instruction">
+     Wähle eine Farbe und klicke auf einen Slot (1-4).
+    </p>
+    <h4>
+     1. Farbe auswählen
+    </h4>
+    <div class="colors-palette">
+     <div class="color-ball red" data-action="select-color" data-color="red">
+     </div>
+     <div class="color-ball blue" data-action="select-color" data-color="blue">
+     </div>
+     <div class="color-ball green" data-action="select-color" data-color="green">
+     </div>
+     <div class="color-ball yellow" data-action="select-color" data-color="yellow">
+     </div>
+    </div>
+    <small>
+     Aktuell gewählte Farbe:
+     <strong class="selected-color-value" id="selected-color-text">
+      Keine
+     </strong>
+    </small>
+    <h4>
+     2. Codeposition auswählen
+    </h4>
+    <div class="code-slots">
+     <div class="slot" data-action="set-slot" data-slot="0" id="slot-0">
+      1
+     </div>
+     <div class="slot" data-action="set-slot" data-slot="1" id="slot-1">
+      2
+     </div>
+     <div class="slot" data-action="set-slot" data-slot="2" id="slot-2">
+      3
+     </div>
+     <div class="slot" data-action="set-slot" data-slot="3" id="slot-3">
+      4
+     </div>
+    </div>
+    <div class="game-actions">
+     <button class="btn btn-primary" data-action="submit-code">
+      Code bestätigen
+     </button>
+     <button class="btn btn-danger" data-action="abort-game">
+      Spiel abbrechen
+     </button>
+    </div>
+   </div>
+   <div class="right-panel">
+    <h3>
+     Codehistorie
+    </h3>
+    <small class="muted-text">
+     Versuche &amp; Feedback
+    </small>
+    <div class="history-list" id="history-list">
+    </div>
+   </div>
+  </div>
+  <script src="../src/game.ts" type="module">
+  </script>
+ </body>
+</html>

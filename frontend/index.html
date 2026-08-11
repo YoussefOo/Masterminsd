@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Codecracker</title>
+  <script type="module" src="/src/index.ts"></script>
+</head>
+<body>
+  <!-- لوحة التحكم ديال الأدمن اللي كاتبان غير للأدمن بوحده -->
+<div id="admin-panel" style="display: none; padding: 20px; background: #fff; border-radius: 8px; margin-top: 20px;">
+  <h2>Benutzerverwaltung (Admin Panel)</h2>
+  <table style="width: 100%; border-collapse: collapse; margin-top: 10px;">
+    <thead>
+      <tr style="background: #f8f9fa;">
+        <th style="padding: 10px; border-bottom: 1px solid #ddd;">Benutzername</th>
+        <th style="padding: 10px; border-bottom: 1px solid #ddd;">Rolle</th>
+        <th style="padding: 10px; border-bottom: 1px solid #ddd; text-align: right;">Aktionen</th>
+      </tr>
+    </thead>
+    <tbody id="admin-users-list"></tbody>
+  </table>
+</div>
+
+<script>
+  // فاش تحل الصفحة، كنقراو شكون اليوزر من localStorage أو الـ Session
+  const userRole = localStorage.getItem('userRole'); // مثلاً كنا مخبيين الرول هنا وقت Login
+  const username = localStorage.getItem('username');
+
+  if (userRole === 'ADMIN') {
+    // إلا كان أدمن، كنحيطوا ليه الخفاء وكنرسمو ليه الجدول هنا ديريكت
+    document.getElementById('admin-panel').style.display = 'block';
+    loadAdminData();
+  }
+
+  async function loadAdminData() {
+    const res = await fetch('/api/admin/users');
+    const users = await res.json();
+    const tbody = document.getElementById('admin-users-list');
+    tbody.innerHTML = '';
+    
+    users.forEach(u => {
+      tbody.innerHTML += `
+        <tr>
+          <td style="padding: 10px; border-bottom: 1px solid #eee;">${u.username}</td>
+          <td style="padding: 10px; border-bottom: 1px solid #eee;">${u.role}</td>
+          <td style="padding: 10px; border-bottom: 1px solid #eee; text-align: right;">
+            <button onclick="deleteUser(${u.id})" style="background: red; color: white; border: none; padding: 5px 10px; border-radius: 4px; cursor: pointer;">Löschen</button>
+          </td>
+        </tr>
+      `;
+    });
+  }
+
+  async function deleteUser(id) {
+    if(confirm('Wللی بغيتي تمسحو؟')) {
+      await fetch(`/api/admin/users/${id}`, { method: 'DELETE' });
+      loadAdminData();
+    }
+  }
+</script>
+</body>
+</html>

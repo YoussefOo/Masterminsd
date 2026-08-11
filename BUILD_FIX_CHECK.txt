@@ -1,0 +1,30 @@
+Static checks:
+{
+  "game": {
+    "ts_entry": true,
+    "no_inline_script": true,
+    "no_onclick": true,
+    "js_entry_removed": true
+  },
+  "dashboard": {
+    "ts_entry": true,
+    "no_inline_script": true,
+    "no_onclick": true,
+    "js_entry_removed": true
+  },
+  "admin": {
+    "ts_entry": true,
+    "no_inline_script": true,
+    "no_onclick": true,
+    "js_entry_removed": true
+  },
+  "result": {
+    "ts_entry": true,
+    "no_inline_script": true,
+    "no_onclick": true,
+    "js_entry_removed": true
+  }
+}
+
+TypeScript compiler check was performed on all frontend/src/*.ts files with DOM/ES libs; it passed after these fixes.
+Docker image build could not be executed in this sandbox because dependency downloads are unavailable here.

@@ -1,0 +1,30 @@
+{
+  "game": {
+    "ts_exists": true,
+    "js_removed": true,
+    "html_points_to_ts": true,
+    "inline_script": false,
+    "onclick": false
+  },
+  "dashboard": {
+    "ts_exists": true,
+    "js_removed": true,
+    "html_points_to_ts": true,
+    "inline_script": false,
+    "onclick": false
+  },
+  "admin": {
+    "ts_exists": true,
+    "js_removed": true,
+    "html_points_to_ts": true,
+    "inline_script": false,
+    "onclick": false
+  },
+  "result": {
+    "ts_exists": true,
+    "js_removed": true,
+    "html_points_to_ts": true,
+    "inline_script": false,
+    "onclick": false
+  }
+}

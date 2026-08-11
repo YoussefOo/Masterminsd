@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Codecracker - Anmelden</title>
+  <!-- هنا فين كيتأكد بلي الستايل خدام -->
+</head>
+<body class="login-page-body">
+  <div class="login-wrapper">
+    <div class="login-card">
+      
+      <div class="login-header">
+        <!-- اللوجو النقي لي عجبك -->
+        <img src="/assets/images.jpeg" alt="Codecracker Logo" class="login-logo">
+        <h1>Anmelden</h1>
+        <p>Willkommen zurück! Bitte melde dich an.</p>
+      </div>
+
+      <form id="login-form">
+        <div class="form-group">
+          <label for="username">Benutzername</label>
+          <input type="text" id="username" placeholder="z. B. Youssef" required>
+        </div>
+
+        <div class="form-group">
+          <label for="password">Passwort</label>
+          <input type="password" id="password" placeholder="••••••••" required>
+        </div>
+
+        <div id="login-message" class="error-banner hidden"></div>
+
+        <button type="submit" class="btn-primary">Einloggen</button>
+      </form>
+
+      <div class="login-footer">
+        <p>Noch keinen Account? <a href="/pages/register.html">Hier registrieren</a></p>
+      </div>
+
+    </div>
+  </div>
+
+  <script type="module" src="../src/login.ts"></script>
+</body>
+</html>

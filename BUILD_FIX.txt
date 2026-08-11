@@ -1,0 +1,4 @@
+Confirmed Docker error: TypeScript 6 TS2882 on side-effect SCSS imports.
+Fix: added frontend/src/vite-env.d.ts declaring *.scss and *.css modules and referencing Vite client types.
+No game/API/backend/HTML/SCSS content was changed.
+The existing Docker Vite permission fix remains in place.

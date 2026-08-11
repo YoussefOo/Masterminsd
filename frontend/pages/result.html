@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="de">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Codecracker - Spiel beendet
+  </title>
+ </head>
+ <body>
+  <div class="container">
+   <div class="success-icon" id="icon-box">
+    ⏳
+   </div>
+   <h2>
+    Spiel beendet
+   </h2>
+   <p class="sub">
+    <strong id="winner-text">
+     Ergebnisse werden geladen...
+    </strong>
+   </p>
+   <div class="error-box hidden" id="error-container">
+   </div>
+   <div class="loading-spinner" id="loading-spinner">
+   </div>
+   <table>
+    <thead>
+     <tr>
+      <th>
+       Spieler
+      </th>
+      <th>
+       Ergebnis
+      </th>
+      <th>
+       Punkte aus diesem Spiel
+      </th>
+      <th>
+       Gesamtpunkte
+      </th>
+     </tr>
+    </thead>
+    <tbody id="result-table-body">
+     <tr>
+      <td class="text-center" colspan="4">
+       ⏳ Lade Ergebnisse...
+      </td>
+     </tr>
+    </tbody>
+   </table>
+   <button class="btn-close" data-action="exit-destination">
+    Weiter zur Lobby / Admin
+   </button>
+  </div>
+  <script src="../src/result.ts" type="module">
+  </script>
+ </body>
+</html>

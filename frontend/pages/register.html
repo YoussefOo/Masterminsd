@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Codecracker - Registrieren</title>
+</head>
+<body class="login-page-body">
+  <div class="login-wrapper">
+    <div class="login-card">
+      <div class="login-header">
+        <h1>Neuen Account erstellen</h1>
+        <p>Registriere dich, um einen Account in der Datenbank zu erstellen.</p>
+      </div>
+
+      <form id="register-form">
+        <div class="form-group">
+          <label for="username">Benutzername</label>
+          <input type="text" id="username" placeholder="z. B. Youssef" required>
+        </div>
+
+        <div class="form-group">
+          <label for="password">Passwort</label>
+          <input type="password" id="password" placeholder="••••••••" required>
+        </div>
+
+        <!-- الاختيار ديال الـ Role (Player ولا Admin) بنفس الديكور -->
+        <div class="form-group">
+          <label for="role">Rolle auswählen</label>
+          <select id="role" required style="width: 100%; padding: 12px 14px; background: #0f172a; border: 1px solid #334155; border-radius: 8px; color: #fff; font-size: 0.95rem; box-sizing: border-box;">
+            <option value="PLAYER">Player</option>
+            <option value="ADMIN">Admin</option>
+          </select>
+        </div>
+
+        <div id="register-message" class="error-banner hidden"></div>
+
+        <button type="submit" class="btn-primary">Registrieren</button>
+      </form>
+
+      <div class="login-footer">
+        <p>Bereits Account? <a href="/pages/login.html">Zurück zum Login</a></p>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="../src/register.ts"></script>
+</body>
+</html>

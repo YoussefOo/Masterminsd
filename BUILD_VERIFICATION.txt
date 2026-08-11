@@ -1,0 +1,31 @@
+Fixed TypeScript compilation errors caused by EventTarget.closest() in the four page entry files.
+Verified: `npx tsc --noEmit` exits successfully (no TypeScript errors).
+The Dockerfile runs `npm ci` then `npm run build` (tsc && vite build).
+Vite itself was not executable in this sandbox because frontend dependencies are not installed locally; Docker will install them via npm ci.
+
+{
+  "game": {
+    "ts_entry": true,
+    "js_entry_removed": true,
+    "no_inline_script": true,
+    "no_onclick": true
+  },
+  "dashboard": {
+    "ts_entry": true,
+    "js_entry_removed": true,
+    "no_inline_script": true,
+    "no_onclick": true
+  },
+  "admin": {
+    "ts_entry": true,
+    "js_entry_removed": true,
+    "no_inline_script": true,
+    "no_onclick": true
+  },
+  "result": {
+    "ts_entry": true,
+    "js_entry_removed": true,
+    "no_inline_script": true,
+    "no_onclick": true
+  }
+}

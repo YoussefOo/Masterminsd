@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="de">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Codecracker - Spieler Lobby
+  </title>
+ </head>
+ <body>
+  <div class="dashboard-topbar">
+   <button class="logout-btn" data-action="logout">
+    Abmelden
+   </button>
+   <h1 class="dashboard-title" id="lobby-main-title">
+    Spieler Lobby
+   </h1>
+  </div>
+  <div class="main-grid">
+   <div class="card">
+    <h2 id="lobby-card-heading">
+     Lobby
+    </h2>
+    <p class="subtitle">
+     Eingeloggte Spieler und Status
+    </p>
+    <!-- Incoming invitations are always visible in the lobby. -->
+    <div id="incoming-invitations-container">
+    </div>
+    <!-- Sender-side invitation tools are collapsible. Opening/closing this panel
+           must never delete the server-side invitations or the selected players. -->
+    <div class="invitation-box">
+     <button class="invitation-toggle" data-action="toggle-invitations" id="spiel-einladung-toggle" type="button">
+      <span>
+       ✉️ Spiel Einladung
+      </span>
+      <span id="spiel-einladung-arrow">
+       ▼
+      </span>
+     </button>
+     <div class="invitation-panel" id="spiel-einladung-panel">
+      <div id="outgoing-invitations-content">
+       Lade meine Einladungen...
+      </div>
+      <div id="invitation-selection-content">
+      </div>
+     </div>
+    </div>
+    <div id="active-games-container">
+    </div>
+    <div class="lobby-counter-box" id="lobby-counter">
+     Gesamt: 0 | Bereit: 0 | Ausstehend: 0
+    </div>
+    <div id="lobby-users-list">
+    </div>
+    <div class="status-section">
+     <p class="ready-question">
+      Bist du bereit zu spielen?
+     </p>
+     <button class="btn btn-bereit" data-action="status-ready" id="main-bereit-btn">
+      Bereit melden
+     </button>
+     <button class="btn btn-ablehnen" data-action="status-pending">
+      Ausstehend
+     </button>
+    </div>
+   </div>
+   <div class="card">
+    <h2>
+     Highscore
+    </h2>
+    <p class="subtitle">
+     Rangliste aller Spieler
+    </p>
+    <table>
+     <thead>
+      <tr>
+       <th>
+        Position
+       </th>
+       <th>
+        Name
+       </th>
+       <th class="text-right">
+        Punkte
+       </th>
+      </tr>
+     </thead>
+     <tbody id="highscore-table">
+      <tr>
+       <td class="text-center" colspan="3">
+        Lade Highscore...
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+  </div>
+  <script src="../src/dashboard.ts" type="module">
+  </script>
+ </body>
+</html>
