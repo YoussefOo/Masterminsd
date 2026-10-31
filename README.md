@@ -1,7 +1,4 @@
 # Informatikprojekt SoSe 2026
-
-> Dozenten: Sebastian Süß & Steffen Rupp
-
 ## Projektaufgabe - Multiplayer Codecracker
 
 Entwickeln Sie eine Multiplayer-Anwendung nach dem Vorbild des bekannten Spiels [**Mastermind (Codecracker)**](https://de.wikipedia.org/wiki/Mastermind_(Spiel)).
