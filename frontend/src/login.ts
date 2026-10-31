@@ -1,6 +1,5 @@
 import '../styles/main.scss';
 
-// دالة إظهار المودال الأنيق بدلاً من alert المتصفح
 function showModal(message: string, isError: boolean = false, callback?: () => void) {
   if (!document.getElementById('custom-modal-style')) {
     const style = document.createElement('style');
